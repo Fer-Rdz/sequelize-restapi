@@ -1,1 +1,1 @@
-### Rest Api maked with Sequelize and Microsoft SQL server
+## REST API built with Sequelize and SQL Server.
