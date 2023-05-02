@@ -21,6 +21,7 @@ export const createClient = async (req, res) => {
     email,
     password,
   });
+
   res.json(newClient);
 };
 
