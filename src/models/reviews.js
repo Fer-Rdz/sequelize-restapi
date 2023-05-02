@@ -1,5 +1,6 @@
-import { DataTypes } from "sequelize";
+import { BelongsTo, DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
+import { Clients } from "./clients.js";
 
 export const Reviews = sequelize.define("reviews", {
   id: {
@@ -12,4 +13,12 @@ export const Reviews = sequelize.define("reviews", {
   date: {
     type: DataTypes.DATEONLY,
   },
+  user_id: {
+    type: DataTypes.STRING,
+  },
+});
+
+Reviews.belongsTo(Clients, {
+  foreignKey: "user_id",
+  targetKey: "id",
 });
