@@ -8,8 +8,9 @@ import {
 
 const router = Router();
 
-router.get("/bookings", getReviews);
-router.post("/bookings", createReview);
-router.delete("/bookings/:id", deleteReview);
+router.get("/reviews", getReviews);
+router.get("/reviews/:id", updateReview);
+router.post("/reviews", createReview);
+router.delete("/reviews/:id", deleteReview);
 
 export default router;
