@@ -8,7 +8,7 @@ import "./models/bookings.js";
 
 const main = async () => {
   try {
-    await sequelize.sync({ force: true });
+    await sequelize.sync({ force: false });
     console.log("Connected to database");
     app.listen(port);
     console.log(`server running in port http://localhost:${port}/`);
