@@ -13,7 +13,7 @@ export const getClientsByEmail = async (req, res) => {
 };
 
 export const createClient = async (req, res) => {
-  const { id = code, name, lastname, email, password } = req.body;
+  const { id, name, lastname, email, password } = req.body;
   const newClient = await Clients.create({
     id,
     name,

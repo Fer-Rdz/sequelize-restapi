@@ -6,14 +6,14 @@ export const getBookings = async (req, res) => {
   res.json(bookings);
 };
 
-export const getClientsByEmail = async (req, res) => {
-  const { email } = req.params;
-  const clients = await Bookings.findOne({ where: { email } });
-  res.json(clients);
+export const getBookingById = async (req, res) => {
+  const { id } = req.params;
+  const employees = await Employees.findOne({ where: { id } });
+  res.json(employees);
 };
 
 export const createBooking = async (req, res) => {
-  const { id = code, date, time, client_id, service_id } = req.body;
+  const { id, date, time, client_id, service_id } = req.body;
   const newBooking = await Bookings.create({
     id,
     date,

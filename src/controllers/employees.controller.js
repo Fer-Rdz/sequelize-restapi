@@ -13,7 +13,7 @@ export const getEmployeesEmail = async (req, res) => {
 };
 
 export const createEmployee = async (req, res) => {
-  const { id = code, name, lastname, email, password } = req.body;
+  const { id, name, lastname, email, password } = req.body;
   const newEmployee = await Employees.create({
     id,
     name,

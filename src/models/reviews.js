@@ -3,22 +3,24 @@ import { sequelize } from "../database/database.js";
 import { Clients } from "./clients.js";
 
 export const Reviews = sequelize.define("reviews", {
-  id: {
-    type: DataTypes.STRING,
-    primaryKey: true,
-  },
   message: {
     type: DataTypes.STRING,
   },
-  date: {
-    type: DataTypes.DATEONLY,
-  },
-  user_id: {
-    type: DataTypes.STRING,
+  stars: {
+    type: DataTypes.INTEGER,
   },
 });
 
 Reviews.belongsTo(Clients, {
-  foreignKey: "user_id",
-  targetKey: "id",
+  foreignKey: {
+    name: "client_id",
+    allowNull: false,
+  },
+});
+
+Clients.hasOne(Reviews, {
+  foreignKey: {
+    name: "client_id",
+    allowNull: false,
+  },
 });

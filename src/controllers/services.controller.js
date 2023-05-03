@@ -7,7 +7,7 @@ export const getServices = async (req, res) => {
 };
 
 export const createService = async (req, res) => {
-  const { id = code, name, price } = req.body;
+  const { id, name, price } = req.body;
   const newService = await Services.create({
     id,
     name,

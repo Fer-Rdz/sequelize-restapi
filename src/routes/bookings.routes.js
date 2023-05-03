@@ -3,14 +3,14 @@ import {
   getBookings,
   deleteBooking,
   createBooking,
-} from "../controllers/bookings.controller";
+  getBookingById,
+} from "../controllers/bookings.controller.js";
 
 const router = Router();
 
-router.get("/bookings", getClients);
-router.get("/bookings/:email", getClientsByEmail);
-router.post("/bookings", createClient);
-router.delete("/bookings/:id", deleteClient);
-router.put("/bookings/:id", updateClient);
+router.get("/bookings", getBookings);
+router.get("/bookings/:id", getBookingById);
+router.post("/bookings", createBooking);
+router.delete("/bookings/:id", deleteBooking);
 
 export default router;
