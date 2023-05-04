@@ -1,5 +1,4 @@
 import { Reviews } from "../models/reviews.js";
-import { code } from "../idgen.js";
 
 export const getReviews = async (req, res) => {
   const reviews = await Reviews.findAll();

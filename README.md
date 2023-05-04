@@ -1,15 +1,22 @@
-## REST API built with Sequelize and SQL Server.
+# REST API built with Sequelize and SQL Server.
 
 ## Getting Started
 
-Install dependencies:
+### Install dependencies:
 
 ```bash
 npm install
 ```
 
-Run server
+### Run server
 
 ```bash
 npm run dev
+```
+
+```
+ ├──src
+ │   ├──controllers
+
+
 ```

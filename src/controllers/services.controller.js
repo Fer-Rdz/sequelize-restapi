@@ -1,5 +1,4 @@
 import { Services } from "../models/services.js";
-import { code } from "../idgen.js";
 
 export const getServices = async (req, res) => {
   const services = await Services.findAll();

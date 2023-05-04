@@ -1,4 +1,3 @@
-import { code } from "../idgen.js";
 import { Bookings } from "../models/bookings.js";
 
 export const getBookings = async (req, res) => {

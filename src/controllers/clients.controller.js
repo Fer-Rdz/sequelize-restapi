@@ -1,4 +1,3 @@
-import { code } from "../idgen.js";
 import { Clients } from "../models/clients.js";
 
 export const getClients = async (req, res) => {
