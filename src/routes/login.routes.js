@@ -14,6 +14,8 @@ loginRoute.post("/login", async (req, res) => {
   const token = jwt.sign(
     {
       name: user.name,
+      lastname: user.lastname,
+      email: user.email,
       id: user.id,
     },
     process.env.JWT_PRIVATE_KEY
