@@ -5,6 +5,7 @@ import "./models/employees.js";
 import "./models/services.js";
 import "./models/reviews.js";
 import "./models/bookings.js";
+import "./models/clients.js";
 
 const main = async () => {
   try {

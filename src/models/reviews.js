@@ -3,6 +3,11 @@ import { sequelize } from "../database/database.js";
 import { Clients } from "./clients.js";
 
 export const Reviews = sequelize.define("reviews", {
+  id: {
+    type: DataTypes.UUID,
+    primaryKey: true,
+    defaultValue: DataTypes.UUIDV4,
+  },
   message: {
     type: DataTypes.STRING,
   },
@@ -13,6 +18,8 @@ export const Reviews = sequelize.define("reviews", {
 
 Reviews.belongsTo(Clients, {
   foreignKey: {
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
     name: "client_id",
     allowNull: false,
   },
@@ -20,6 +27,8 @@ Reviews.belongsTo(Clients, {
 
 Clients.hasOne(Reviews, {
   foreignKey: {
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
     name: "client_id",
     allowNull: false,
   },
