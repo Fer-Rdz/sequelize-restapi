@@ -1,0 +1,16 @@
+
+Bookings.belongsToMany(Services, {
+  through: { Bookings_Services },
+  foreignKey: {
+    name: "service_id",
+    allowNull: false,
+  },
+});
+
+Services.belongsToMany(Bookings, {
+  through: { Bookings_Services },
+  foreignKey: {
+    name: "service_id",
+    allowNull: false,
+  },
+});

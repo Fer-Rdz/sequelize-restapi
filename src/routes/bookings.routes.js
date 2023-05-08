@@ -5,7 +5,7 @@ import {
   createBooking,
   getBookingById,
 } from "../controllers/bookings.controller.js";
-import verifyToken from "../../tokens/validateTokens.js";
+import verifyToken from "../tokens/validateTokens.js";
 
 const router = Router();
 
